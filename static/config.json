@@ -1,29 +1,26 @@
 {
-  "EnableNuiCommand": true,
-  "EnableServerTests": true,
-  "EnableClientTests": true,
   "setup": {
     "target": "ox_target",
     "notify": "ox_lib",
     "miniGame": "ox_lib",
     "progressBar": "ox_lib",
-    "zoneLocation": [150.71, -565.55, 43.89],
+    "zoneLocation": [-795.27, 879.42, 203.17],
     "zoneDistance": 150,
     "pedModel": "ig_old_man2",
-    "pedLocation": [150.71, -565.55, 43.89, 114.31],
+    "pedLocation": [-795.27, 879.42, 203.17, 191.31],
     "pedScenario": "WORLD_HUMAN_SMOKING"
   },
   "shop": {
+    "account": "cash",
     "blip": {
       "enable": true,
-      "sprite": 502,
-      "color": 37,
+      "sprite": 77,
+      "color": 3,
       "scale": 1.0,
-      "label": "Test Shop"
+      "label": "Litter Picking"
     },
     "buyShop": {
       "enable": true,
-      "account": "cash",
       "items": {
         "1": {
           "item": "burger",
@@ -41,7 +38,6 @@
     },
     "sellShop": {
       "enable": true,
-      "account": "cash",
       "items": {
         "1": {
           "item": "burger",
@@ -66,14 +62,14 @@
     "5": 50000
   },
   "icons": {
-    "test_buy_shop": "fas fa-comment",
-    "test_buy_shop_color": "",
+    "litter_picking_buy_shop": "fas fa-comment",
+    "litter_picking_buy_shop_color": "",
 
-    "test_sell_shop": "fas fa-sack-dollar",
-    "test_sell_shop_color": "",
+    "litter_picking_sell_shop": "fas fa-sack-dollar",
+    "litter_picking_sell_shop_color": "",
 
-    "stats_test_stat": "fas fa-magnet",
-    "stats_test_stat_color": "",
+    "stats_picked": "fas fa-magnet",
+    "stats_picked_color": "",
 
     "stats_earned": "fas fa-dollar-sign",
     "stats_earned_color": "",
@@ -84,13 +80,13 @@
     "view_stats": "fas fa-chart-pie",
     "view_stats_color": "",
 
-    "test_shop_leaderboard": "fas fa-ranking-star",
-    "test_shop_leaderboard_color": "",
+    "litter_picking_leaderboard": "fas fa-ranking-star",
+    "litter_picking_leaderboard_color": "",
 
     "leaderboard": "fas fa-trophy"
   },
   "stats": {
-    "testStat": true,
+    "picked": true,
     "earned": true
   },
   "leaderboard": true

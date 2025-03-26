@@ -1,5 +1,5 @@
 {
-	"name": "kj_fivem_template",
+	"name": "kj_litter_picking",
 	"author": "kjmaster1",
 	"version": "0.0.0",
 	"license": "",
@@ -16,9 +16,9 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kjmaster1/kj_fivem_template.git"
+		"url": "https://github.com/kjmaster1/kj_litter_picking.git"
 	},
-	"bugs": "https://github.com/kjmaster1/kj_fivem_template/issues",
+	"bugs": "https://github.com/kjmaster1/kj_litter_picking/issues",
 	"devDependencies": {
 		"@citizenfx/client": "latest",
 		"@citizenfx/server": "latest",
