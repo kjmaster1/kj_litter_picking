@@ -1,3 +1,3 @@
-# kj_fivem_template
+# kj_litter_picking
 
-A template to build FiveM TypeScript resources with, comes with a number of objects and functions for common frameworks. Built on top of the Overextended boilerplate found [here](https://github.com/overextended/fivem-typescript-boilerplate)
+A FiveM litter picking job script written in TypScript as a learning exercise for creating FiveM scripts.
