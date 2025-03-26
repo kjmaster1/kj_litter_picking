@@ -1,0 +1,97 @@
+{
+  "EnableNuiCommand": true,
+  "EnableServerTests": true,
+  "EnableClientTests": true,
+  "setup": {
+    "target": "ox_target",
+    "notify": "ox_lib",
+    "miniGame": "ox_lib",
+    "progressBar": "ox_lib",
+    "zoneLocation": [150.71, -565.55, 43.89],
+    "zoneDistance": 150,
+    "pedModel": "ig_old_man2",
+    "pedLocation": [150.71, -565.55, 43.89, 114.31],
+    "pedScenario": "WORLD_HUMAN_SMOKING"
+  },
+  "shop": {
+    "blip": {
+      "enable": true,
+      "sprite": 502,
+      "color": 37,
+      "scale": 1.0,
+      "label": "Test Shop"
+    },
+    "buyShop": {
+      "enable": true,
+      "account": "cash",
+      "items": {
+        "1": {
+          "item": "burger",
+          "price": 5,
+          "icon": "burger",
+          "iconColor": ""
+        },
+        "2": {
+          "item": "water",
+          "price": 5,
+          "icon": "droplet",
+          "iconColor": ""
+        }
+      }
+    },
+    "sellShop": {
+      "enable": true,
+      "account": "cash",
+      "items": {
+        "1": {
+          "item": "burger",
+          "price": 5,
+          "icon": "burger",
+          "iconColor": ""
+        },
+        "2": {
+          "item": "water",
+          "price": 5,
+          "icon": "droplet",
+          "iconColor": ""
+        }
+      }
+    }
+  },
+  "experience": {
+    "1": 0,
+    "2": 2500,
+    "3": 10000,
+    "4": 20000,
+    "5": 50000
+  },
+  "icons": {
+    "test_buy_shop": "fas fa-comment",
+    "test_buy_shop_color": "",
+
+    "test_sell_shop": "fas fa-sack-dollar",
+    "test_sell_shop_color": "",
+
+    "stats_test_stat": "fas fa-magnet",
+    "stats_test_stat_color": "",
+
+    "stats_earned": "fas fa-dollar-sign",
+    "stats_earned_color": "",
+
+    "player_level": "fas fa-chart-simple",
+    "player_level_color": "",
+
+    "view_stats": "fas fa-chart-pie",
+    "view_stats_color": "",
+
+    "test_shop_leaderboard": "fas fa-ranking-star",
+    "test_shop_leaderboard_color": "",
+
+    "leaderboard": "fas fa-trophy"
+  },
+  "stats": {
+    "testStat": true,
+    "earned": true
+  },
+  "leaderboard": true
+}
