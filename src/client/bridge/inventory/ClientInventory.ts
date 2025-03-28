@@ -4,6 +4,10 @@ import {ClientFramework} from "../framework/ClientFramework";
 
 export class ClientInventory extends Inventory {
 
+  getDurabilityType(): 'quality' | 'durability' {
+    return "quality"
+  }
+
   getPlayerInventory(framework?: ClientFramework): unknown {
     console.error('^1[ERROR]: No valid path found to get player inventory, please seek support!')
     return undefined;

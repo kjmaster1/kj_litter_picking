@@ -13,4 +13,9 @@ export class OxClientInventory extends ClientInventory {
   hasItem(item: string, amount: number): boolean {
     return exports[this.name].Search('count', item) >= amount
   }
+
+
+  getDurabilityType(): "quality" | "durability" {
+    return "durability"
+  }
 }

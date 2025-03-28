@@ -10,12 +10,13 @@ export class OxServerInventory extends ServerInventory {
   }
 
   getDurabilityType(): "quality" | "durability" {
-    return 'quality';
+    return 'durability';
   }
 
 
   getMetadata(source: number, item: string): undefined | any {
     const data = exports[this.name].Search(source, 'slots', item)
+    console.log(data);
     if (!data || data.length === 0) {
       return undefined;
     }

@@ -28,10 +28,10 @@ export interface QbProgressBarTable {
   useWhileDead?: boolean; // false
   canCancel?: boolean; // true
   disarm?: boolean; // true
-  controlDisables?: ControlDisablesTable;
-  animation?: AnimationTable;
-  prop?: PropTable;
-  propTwo?: PropTable;
+  controlDisables?: QbControlDisablesTable;
+  animation?: QbAnimationTable;
+  prop?: QbPropTable;
+  propTwo?: QbPropTable;
 }
 
 export class QbProgressBar extends ProgressBar {

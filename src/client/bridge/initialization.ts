@@ -104,18 +104,24 @@ export function initializeMiniGame(): MiniGame {
   }
 }
 
-export function initializeProgressBar(): ProgressBar {
+export function initializePickingProgressBar(): ProgressBar {
 
-  const duration = 2000;
-  const name = 'Drinking Water';
-  const useWhileDead = false;
-  const canCancel = false;
-  const disableCar = true;
-  const dict = 'mp_player_intdrink';
-  const clip = 'loop_bottle';
-  const model = 'prop_ld_flow_bottle';
-  const coords = {x: 0.03, y: 0.03, z: 0.02};
-  const rotation = {x: 0.0, y: 0.0, z: -1.5};
+  const duration = 0;
+  const name = Config.picking.animation.label;
+  const useWhileDead = Config.picking.animation.useWhileDead;
+  const canCancel = Config.picking.animation.canCancel;
+  const disableCar = Config.picking.animation.disable.car;
+  const disableMove = Config.picking.animation.disable.move;
+  const disableCombat = Config.picking.animation.disable.combat;
+  const dict = Config.picking.animation.anim.dict;
+  const clip = Config.picking.animation.anim.clip;
+  const flag = Config.picking.animation.anim.flag;
+  const bone = Config.picking.animation.prop.bone;
+  const model = Config.picking.animation.prop.model;
+  const coordsArr = Config.picking.animation.prop.pos;
+  const coords = {x: coordsArr[0], y: coordsArr[1], z: coordsArr[2]};
+  const rotationArr = Config.picking.animation.prop.rot;
+  const rotation = {x: rotationArr[0], y: rotationArr[1], z: rotationArr[2]};
 
   const oxProgressBarData: OxProgressBarTable = {
     duration: duration,
@@ -123,14 +129,18 @@ export function initializeProgressBar(): ProgressBar {
     useWhileDead: useWhileDead,
     canCancel: canCancel,
     disable: {
+      move: disableMove,
       car: disableCar,
+      combat: disableCombat,
     },
     anim: {
       dict: dict,
-      clip: clip
+      clip: clip,
+      flag: flag,
     },
     prop: {
       model: model,
+      bone: bone,
       pos: coords,
       rot: rotation,
     }
@@ -143,14 +153,18 @@ export function initializeProgressBar(): ProgressBar {
     useWhileDead: useWhileDead,
     canCancel: canCancel,
     controlDisables: {
+      disableMovement: disableMove,
       disableCarMovement: disableCar,
+      disableCombat: disableCombat,
     },
     animation: {
       animDict: dict,
-      anim: dict
+      anim: clip,
+      flags: flag,
     },
     prop: {
       model: model,
+      bone: bone,
       coords: coords,
       rotation: rotation,
     }

@@ -22,6 +22,10 @@ lib.onClientCallback(`${cache.resource}:gettopplayers`, () => {
   return getTopPlayers();
 });
 
+lib.onClientCallback(`${cache.resource}:getMetadata`, (playerId, item: string) => {
+  return serverFramework.getMetadata(playerId, item);
+})
+
 const litterPickingTable = new ExperienceTable(cache.resource, 'picked').createTableIfNotExists();
 
 litterPickingTable.then(async (table) => {

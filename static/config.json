@@ -23,16 +23,54 @@
       "enable": true,
       "items": {
         "1": {
-          "item": "burger",
-          "price": 5,
-          "icon": "burger",
-          "iconColor": ""
+          "item": "kj_litter_picker",
+          "price": 150,
+          "icon": "hammer",
+          "iconColor": "",
+          "metadata": {
+            "durability": 100
+          },
+          "level": 1
         },
         "2": {
-          "item": "water",
-          "price": 5,
-          "icon": "droplet",
-          "iconColor": ""
+          "item": "kj_litter_picker_2",
+          "price": 300,
+          "icon": "hammer",
+          "iconColor": "",
+          "metadata": {
+            "durability": 100
+          },
+          "level": 2
+        },
+        "3": {
+          "item": "kj_litter_picker_3",
+          "price": 750,
+          "icon": "hammer",
+          "iconColor": "",
+          "metadata": {
+            "durability": 100
+          },
+          "level": 3
+        },
+        "4": {
+          "item": "kj_litter_picker_4",
+          "price": 1500,
+          "icon": "hammer",
+          "iconColor": "",
+          "metadata": {
+            "durability": 100
+          },
+          "level": 4
+        },
+        "5": {
+          "item": "kj_litter_picker_5",
+          "price": 3000,
+          "icon": "hammer",
+          "iconColor": "",
+          "metadata": {
+            "durability": 100
+          },
+          "level": 5
         }
       }
     },
@@ -89,5 +127,76 @@
     "picked": true,
     "earned": true
   },
-  "leaderboard": true
+  "leaderboard": true,
+  "pickers": {
+    "1": {"item": "kj_litter_picker", "degrade": 1},
+    "2": {"item": "kj_litter_picker_2", "degrade": 0.75},
+    "3": {"item": "kj_litter_picker_3", "degrade": 0.5},
+    "4": {"item": "kj_litter_picker_4", "degrade": 0.25},
+    "5": {"item": "kj_litter_picker_5", "degrade": 0.1}
+  },
+  "picking": {
+    "hours": {
+      "min": 0,
+      "max": 24
+    },
+    "zones": [
+      {
+        "center": [-795.27, 879.42, 203.17],
+        "distance": 150,
+        "litterSpawns": [
+          {
+            "models": [
+              "prop_rub_litter_06",
+              "prop_rub_litter_8",
+              "prop_rub_litter_09",
+              "ng_proc_litter_plasbot1",
+              "ng_proc_litter_plasbot2",
+              "ng_proc_litter_plasbot3"
+            ],
+            "level": 1,
+            "duration": {"min": 2500, "max": 2500},
+            "reward": [
+              {"item": "ls_copper_ore", "min": 1, "max": 2}
+            ],
+            "xp": {"min": 1, "max": 3},
+            "respawn": 25000,
+            "litter": [
+              [-803.81, 863.98, 203.15],
+              [-817.48, 878.81, 203.18],
+              [-785.75, 889.16, 203.23],
+              [-779.24, 862.41, 203.57],
+              [-804.32, 846.57, 203.69],
+              [-848.22, 842.26, 202.86],
+              [-865.03, 843.32, 202.87],
+              [-850.95, 854.82, 202.99],
+              [-784.52, 892.05, 203.24],
+              [-764.84, 881.42, 203.52]
+            ]
+          }
+        ]
+      }
+    ],
+
+    "animation": {
+      "label": "Litter Picking...",
+      "useWhileDead": false,
+      "canCancel": true,
+      "disable": {
+        "car": true,
+        "move": true,
+        "combat": true
+      },
+      "anim": {
+        "dict": "pickup_object",
+        "clip": "pickup_low"
+      },
+      "prop": {
+        "bone": 28422,
+        "model": "prop_litter_picker",
+        "pos": [0.09, -0.05, -0.02],
+        "rot": [30, 180, -90]
+      }
+    }
+  }
 }

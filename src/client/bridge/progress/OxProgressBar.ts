@@ -41,9 +41,9 @@ export interface OxProgressBarTable {
   allowCuffed?: boolean;
   allowFalling?: boolean;
   canCancel?: boolean;
-  anim?: AnimTable;
-  prop?: PropTable | PropTable[];
-  disable?: DisableTable;
+  anim?: OxAnimTable;
+  prop?: OxPropTable | OxPropTable[];
+  disable?: OxDisableTable;
 }
 
 export class OxProgressBar extends ProgressBar {
@@ -53,7 +53,6 @@ export class OxProgressBar extends ProgressBar {
   }
 
   async doProgressBar() {
-    console.log('table:', this.progressBarTable);
     return await lib.progressBar(this.progressBarTable);
   }
 }
