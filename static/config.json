@@ -25,7 +25,7 @@
         "1": {
           "item": "kj_litter_picker",
           "price": 150,
-          "icon": "hammer",
+          "icon": "fa-solid fa-trash",
           "iconColor": "",
           "metadata": {
             "durability": 100
@@ -35,7 +35,7 @@
         "2": {
           "item": "kj_litter_picker_2",
           "price": 300,
-          "icon": "hammer",
+          "icon": "fa-solid fa-trash",
           "iconColor": "",
           "metadata": {
             "durability": 100
@@ -45,7 +45,7 @@
         "3": {
           "item": "kj_litter_picker_3",
           "price": 750,
-          "icon": "hammer",
+          "icon": "fa-solid fa-trash",
           "iconColor": "",
           "metadata": {
             "durability": 100
@@ -55,7 +55,7 @@
         "4": {
           "item": "kj_litter_picker_4",
           "price": 1500,
-          "icon": "hammer",
+          "icon": "fa-solid fa-trash",
           "iconColor": "",
           "metadata": {
             "durability": 100
@@ -65,7 +65,7 @@
         "5": {
           "item": "kj_litter_picker_5",
           "price": 3000,
-          "icon": "hammer",
+          "icon": "fa-solid fa-trash",
           "iconColor": "",
           "metadata": {
             "durability": 100
@@ -106,7 +106,7 @@
     "litter_picking_sell_shop": "fas fa-sack-dollar",
     "litter_picking_sell_shop_color": "",
 
-    "stats_picked": "fas fa-magnet",
+    "stats_picked": "fa-solid fa-trash",
     "stats_picked_color": "",
 
     "stats_earned": "fas fa-dollar-sign",

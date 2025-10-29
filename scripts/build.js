@@ -14,7 +14,7 @@ createBuilder(
     keepNames: true,
     legalComments: 'inline',
     bundle: true,
-    treeShaking: true,
+    treeShaking: true
   },
   [
     {

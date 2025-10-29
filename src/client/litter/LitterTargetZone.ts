@@ -1,14 +1,16 @@
 import lib, {cache, Point} from "@overextended/ox_lib/client";
-import {InteractTargetData} from "../bridge/target/InteractTarget";
-import {OxTargetOptions} from "../bridge/target/OxTarget";
-import {QbTargetParameters} from "../bridge/target/QbTarget";
 import {LitterZone} from "./LitterZone";
 import {clientFramework, notify, pickingProgressBar, target} from "../index";
-import {Delay, randomIntFromInterval} from "../../common/utils";
-import Locale from "../../common/locale";
-import Config from "../../common/config";
-import {OxProgressBar} from "../bridge/progress/OxProgressBar";
-import {QbProgressBar} from "../bridge/progress/QbProgressBar";
+import Locale from "../../shared/locale";
+import Config from "../../shared/config";
+import {
+  InteractTargetData,
+  OxProgressBar,
+  OxTargetOptions,
+  QbProgressBar,
+  QbTargetParameters
+} from "@kjmaster2/kj_lib/client";
+import {Delay, randomIntFromInterval} from "@kjmaster2/kj_lib";
 
 export interface LitterZoneTable {
   [key: number]: LitterZone;
@@ -141,7 +143,7 @@ export class LitterTargetZone {
 
     const level = await litter_picking.GetPlayerData("level") as number;
     if (level < zone.level) {
-      notify.showNotification(Locale('notify.not-experienced'), 'error');
+      notify.showNotification(clientFramework, <string>Locale('notify.not-experienced'), 'error');
       return;
     }
 
@@ -163,7 +165,7 @@ export class LitterTargetZone {
     });
 
     if (!hasPicker) {
-      notify.showNotification(Locale('notify.missing-item'), 'error')
+      notify.showNotification(clientFramework, <string>Locale('notify.missing-item'), 'error')
       return;
     }
 
@@ -173,14 +175,14 @@ export class LitterTargetZone {
     const degrade = litterPickers[level.toString()].degrade;
 
     if (!metadata || !metadata[metatype] || (metadata[metatype] as number) < degrade) {
-      notify.showNotification(Locale('notify.picker-no-durability') as string, 'error')
+      notify.showNotification(clientFramework, Locale('notify.picker-no-durability') as string, 'error')
       return;
     }
 
     const hour = GetClockHours();
     const hours = Config.picking.hours as {min: number, max: number};
     if (hour < hours.min || hour > hours.max) {
-      notify.showNotification(Locale('notify.nighttime') as string, 'error')
+      notify.showNotification(clientFramework, Locale('notify.nighttime') as string, 'error')
       return;
     }
 

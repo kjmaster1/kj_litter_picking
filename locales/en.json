@@ -4,14 +4,6 @@
   "target": {
     "litter-picking-ped-target": "Talk"
   },
-  "notify": {
-    "missing-item": "I am missing something to do this",
-    "not-experienced": "I don't think I'm experienced enough to do this",
-    "no-money": "You do not have enough money",
-    "no-item": "You do not have enough of this item",
-    "no-negative": "You can't buy/sell zero or a negative amount of an item!",
-    "cant-carry": "You cannot carry this much"
-  },
   "inputs": {
     "label": "Quantity",
     "desc": "How many?"
